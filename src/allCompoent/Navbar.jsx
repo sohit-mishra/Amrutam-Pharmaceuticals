@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Logo from "@/assets/logo.png";
 import Company from "@/assets/Company.png";
 import Menu from "@/assets/menu.svg";
-import Search from "@/assets/Search.svg";
+import Search from "@/assets/search.svg";
 import mail from "@/assets/mail.svg";
 import bell from "@/assets/bell.svg";
 import profileFallback from "@/assets/profile.jpg";

@@ -5,7 +5,10 @@ const cors = require("cors");
 const app = express();
 const connectToDatabase = require('./config/db');
 const payment = require('./routers/payments');
-
+const products = require('./routers/products');
+const doctors = require('./routers/doctors');
+const commissions = require('./routers/commissions');
+ 
 connectToDatabase();
 
 app.use(
@@ -24,6 +27,9 @@ app.get("/", (req, res) => {
 
 
 app.use('/payments' ,  payment);
+app.use('/products' ,  products);
+app.use('/doctors' ,  doctors);
+app.use('/commissions' ,  commissions);
 
 
 app.listen(PORT, () => {

@@ -46,7 +46,7 @@ export default function AllRouter() {
         <Route path="affiliate">
           <Route path="dashboard" element={<AffiliateDashboard />} />
           <Route path="commission" element={<AffiliateCommission />} />
-          <Route path="commission/:id" element={<SpecialCommission />} />
+          <Route path="commission/add" element={<SpecialCommission />} />
           <Route path="coupons" element={<AffiliateCoupons />} />
           <Route path="sales" element={<AffiliateSales />} />
           <Route path="doctors" element={<AffiliateDoctors />} />
@@ -56,7 +56,7 @@ export default function AllRouter() {
           <Route path="history" element={<PaymentHistory />} />
         </Route>
         <Route path="customization">
-          <Route index element={<Customization />} />
+          <Route index element={<TemplatePage name={"Customization"}/>} />
           <Route path="app" element={<CustomizationApp />} />
           <Route path="app/add" element={<AddFaq />} />
         </Route>

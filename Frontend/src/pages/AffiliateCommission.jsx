@@ -12,10 +12,15 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import TableData from "@/allCompoent/TableData";
+import { useNavigate } from 'react-router-dom';
 
 export default function AffiliateCommission() {
+  const navigate = useNavigate();
   const [enabled, setEnabled] = useState(false);
-
+  
+  const handleAddCommisson = ()=>{
+     navigate('add');
+  }
   return (
     <motion.div
       className="p-6"
@@ -37,7 +42,7 @@ export default function AffiliateCommission() {
       </motion.div>
 
       <div className="flex items-center justify-end space-x-4">
-        <Button className="px-6 md:px-10 bg-[#28643B] hover:bg-[#1f4f2d]">
+        <Button className="px-6 md:px-10 bg-[#28643B] hover:bg-[#1f4f2d]"  onClick={() => handleAddCommisson()}>
           Add Special Commission
         </Button>
       </div>

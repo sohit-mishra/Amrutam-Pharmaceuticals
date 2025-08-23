@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import BreadcrumbComponent from "@/allCompoent/BreadcrumbComponent";
+import TemplatePage from '../pages/TemplatePage';
 
 export default function AffiliateDoctors() {
   return (
@@ -31,7 +32,7 @@ export default function AffiliateDoctors() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.4 }}
       >
-        Affiliate Doctors
+        <TemplatePage name={"Affiliate Doctors"}/>
       </motion.h1>
     </motion.div>
   );

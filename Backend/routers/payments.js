@@ -1,14 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const {
-  getAllPaymentRequests,
+  getAllPaymentRequestsPending,
+  getAllPaymentRequestsPaidAndDecline,
   updatePaymentRequestStatus,
-  bulkUpdatePaymentRequests,
 } = require('../controllers/paymentController');
 
-
-router.get('/', getAllPaymentRequests);
+router.get('/', getAllPaymentRequestsPending);
+router.get('/history', getAllPaymentRequestsPaidAndDecline);
 router.patch('/:id/status', updatePaymentRequestStatus);
-router.patch('/bulk-status', bulkUpdatePaymentRequests);
 
 module.exports = router;

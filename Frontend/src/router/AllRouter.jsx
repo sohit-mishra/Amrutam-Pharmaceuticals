@@ -13,12 +13,36 @@ import PaymentHistory from "../pages/PaymentHistory";
 import Customization from "../pages/Customization";
 import CustomizationApp from "../pages/CustomizationApp";
 import AddFaq from "../pages/AddFaq"; 
+import TemplatePage from '../pages/TemplatePage';
 
 export default function AllRouter() {
   return (
     <Routes>
       <Route path="/" element={<AdminLayout />}>
-        <Route index element={<Home />} />
+        <Route index element={<TemplatePage name={"Dashboard"}/>} />
+        <Route path="profile" element={<TemplatePage name={"Profile"}/>} />
+
+        <Route path="doctor" element={<TemplatePage name={"Doctor List"}/>} />
+        <Route path="doctor/add" element={<TemplatePage name={"Doctor Add"}/>} />
+
+         <Route path="patients" element={<TemplatePage name={"Patients List"}/>} />
+        <Route path="patients/add" element={<TemplatePage name={"Patients Add"}/>} />
+
+  <Route path="appointment" element={<TemplatePage name={"Appointment List"}/>} />
+        <Route path="appointment/add" element={<TemplatePage name={"Appointment Add"}/>} />
+
+          <Route path="specialties" element={<TemplatePage name={"Specialties List"}/>} />
+        <Route path="specialties/add" element={<TemplatePage name={"Specialties Add"}/>} />
+
+          <Route path="coupons" element={<TemplatePage name={"Coupons List"}/>} />
+        <Route path="coupons/add" element={<TemplatePage name={"Coupons Add"}/>} />
+
+              <Route path="concerns" element={<TemplatePage name={"Concerns List"}/>} />
+        <Route path="concerns/add" element={<TemplatePage name={"Concerns Add"}/>} />
+
+              <Route path="referral" element={<TemplatePage name={"Referral List"}/>} />
+        <Route path="referral/add" element={<TemplatePage name={"Referral Add"}/>} />
+      
         <Route path="affiliate">
           <Route path="dashboard" element={<AffiliateDashboard />} />
           <Route path="commission" element={<AffiliateCommission />} />
